@@ -4,14 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./fonts/demo.css">
+    <title>死侍的神秘礼物派送中-堡垒之夜官方网站-腾讯游戏</title>
+    <!-- 引入swipercss -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 自己的css -->
     <link rel="stylesheet" href="./css/index.css">
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./lib/jQuery/jquery-3.4.1.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
 </head>
 
 <body>
-    <span class="iconfont">&#xe6b6;</span>
-    <p>123</p>
+    <!-- 顶部通用腾讯游戏通栏 -->
+    <div class="ost">
+        <div class="ost-b">
+            <div class="ost-tenlogo">
+                <a href="#"></a>
+            </div>
+            <div class="ost-games">
+                <a href="#">
+                    <img src="./images/ob-games.jpeg" alt="">
+                </a>
+            </div>
+            <div class="ost-back">
+                <p>
+                    <a href="#">返回官网首页</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="g-wrap">
+        <!-- 菜单栏 -->
+        <div class="top-meun">
+            <!-- logo -->
+            <a href="#" class="logo"></a>
+            <!-- 菜单列表 -->
+            <ul class="menu-list">
+                <li><a href="#">堡垒第二夜</a></li>
+                <li><a href="#">商城公告</a></li>
+                <li><a href="#">商城活动</a></li>
+                <li><a href="#">攻略视频</a></li>
+                <li><a href="#">电竞赛事</a></li>
+                <li><a href="#">用户中心</a></li>
+            </ul>
+            <!-- 下拉菜单 -->
+            <div class="nav-mask">
+                <div class="nav-mask-content">
+                    <!-- 第二夜 -->
+                    <ul>
+                        <li><a href="#">S2-特攻对决</a></li>
+                        <li><a href="#">英雄季卡</a></li>
+                        <li><a href="#">玩法专区</a></li>
+                        <li><a href="#">嗨皮岛</a></li>
+                    </ul>
+                    <!-- 新闻公告 -->
+                    <ul>
+                        <li><a href="#">新闻公告</a></li>
+                    </ul>
+                    <!-- 商城活动 -->
+                    <ul>
+                        <li><a href="#">活动专区</a></li>
+                    </ul>
+                    <!-- 攻略视频 -->
+                    <ul>
+                        <li><a href="#">攻略中心</a></li>
+                        <li><a href="#">视频中心</a></li>
+                        <li><a href="#">新手引导</a></li>
+                    </ul>
+                    <!-- 电竞赛事 -->
+                    <ul>
+                        <li><a href="#">堡垒世界杯</a></li>
+                    </ul>
+                    <!-- 用户中心 -->
+                    <ul>
+                        <li><a href="#">客服专区</a></li>
+                        <li><a href="#">安全专题</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 登陆 -->
+            <div class="unlogin">
+                你好,请【
+                <a href="#">QQ登录</a>
+                】
+            </div>
+            <!-- 下载游戏 -->
+            <a href="#" class="download"></a>
+        </div>
+        <!-- banner -->
+        <div class="banner">
+            <a href="#">
+                <img src="./images/banner-img.png" alt="">
+            </a>
+            <div class="version-info">
+                <a href="#">查看详情</a>
+            </div>
+            <!-- 精灵图按钮 -->
+            <a href="#" class="btn-check"></a>
+        </div>
+
+        <!-- 资讯 -->
+        <div class="information">
+            <div class="swiper-container gallery-top act-promo">
+                <!-- 轮播图片 -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/lunbo-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/lunbo-2.jpeg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/lunbo-3.jpeg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/lunbo-4.jpeg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/lunbo-5.jpeg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <!-- <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div> -->
+            </div>
+            <!-- 轮播按钮 -->
+            <div class="swiper-container gallery-thumbs promo-bar">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <span>死侍的神秘礼物</span>
+                    </div>
+                    <div class="swiper-slide">
+                        谍影迷踪开启
+                    </div>
+                    <div class="swiper-slide">
+                        新载具直升机
+                    </div>
+                    <div class="swiper-slide">
+                        查战绩领季卡
+                    </div>
+                    <div class="swiper-slide">
+                        看直播 升季卡
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- swiper初始化 -->
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 0,
+            slidesPerView: 5,
+            freeMode: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            // 禁止下面拖动
+            simulateTouch: true,
+            allowTouchMove: false,
+
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            },
+            // 自动切换
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        });
+    </script>
 </body>
 
 </html>
