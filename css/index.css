@@ -349,6 +349,7 @@ body {
   width: 1920px;
   height: 180px;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .nav-mask .nav-mask-content {
