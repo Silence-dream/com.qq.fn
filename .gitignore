@@ -1,3 +1,7 @@
+/sass/
+/fonts/*.zip
+/demo/
+package-lock.json
 # Logs
 logs
 *.log
