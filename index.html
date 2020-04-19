@@ -142,22 +142,22 @@
                 <div class="swiper-button-prev swiper-button-white"></div> -->
             </div>
             <!-- 轮播按钮 -->
-            <div class="swiper-container gallery-thumbs promo-bar">
-                <div class="swiper-wrapper">
+            <div class="swiper-container gallery-thumbs promo-bar ">
+                <div class="swiper-wrapper a-move">
                     <div class="swiper-slide">
                         <span>死侍的神秘礼物</span>
                     </div>
                     <div class="swiper-slide">
-                        谍影迷踪开启
+                        <span>谍影迷踪开启</span>
                     </div>
                     <div class="swiper-slide">
-                        新载具直升机
+                        <span>新载具直升机</span>
                     </div>
                     <div class="swiper-slide">
-                        查战绩领季卡
+                        <span>查战绩领季卡</span>
                     </div>
                     <div class="swiper-slide">
-                        看直播 升季卡
+                        <span>看直播 升季卡</span>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,6 @@
             // 禁止下面拖动
             simulateTouch: true,
             allowTouchMove: false,
-
         });
         var galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
@@ -192,8 +191,30 @@
                 stopOnLastSlide: false,
                 disableOnInteraction: true,
             },
+            // 开启进度
+            watchSlidesProgress: true,
+            on: {
+                progress: function (progress) {
+                    // $('#SwiperP').html(this.progress);
+                    // console.log(this.progress);
+                    // https://www.swiper.com.cn/api/progress/191.html
+                    // 
+                    let index = this.slides[0].progress;
+                    console.log("现在是轮动到" + this.slides[0].progress);
+                    $('.a-move div').eq(index).css('background', "#1eb8f3").siblings().css("background", "")
+                },
+            }
         });
+        // 鼠标移入切换轮播图
+        $('.a-move div').hover(function () {
+            let index = $(this).index();
+            galleryTop.slideTo(index, 1500, false); //切换到第一个slide，速度为1秒
+        }, function () {
+            // 移出恢复自动轮播
+            galleryTop.autoplay.start();
+        })
     </script>
+
 </body>
 
 </html>
