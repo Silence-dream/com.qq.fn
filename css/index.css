@@ -429,6 +429,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* 资讯 */
 .information {
   position: relative;
   width: 1350px;
@@ -450,12 +451,14 @@ body {
   *zoom: 1;
 }
 
+/* 轮播图 */
 .act-promo {
   width: 750px;
   height: 100%;
   float: left;
 }
 
+/* 轮播图底部  */
 .promo-bar {
   position: absolute;
   bottom: 0;
@@ -475,4 +478,180 @@ body {
 
 .promo-bar .swiper-slide:hover {
   background-color: #24ddff !important;
+}
+
+/* 资讯tab切换 */
+.news {
+  width: 600px;
+  height: 100%;
+  float: left;
+}
+
+.news .news-bar {
+  height: 50px;
+  background-color: #1EB8F3;
+  cursor: pointer;
+}
+
+.news .news-bar:after, .news .news-bar:before {
+  content: "";
+  display: table;
+}
+
+.news .news-bar:after {
+  clear: both;
+}
+
+.news .news-bar {
+  *zoom: 1;
+}
+
+.news .news-bar li {
+  float: left;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  /* 标题文字 */
+}
+
+.news .news-bar li a {
+  display: inline-block;
+  width: 46px;
+  height: 25px;
+  vertical-align: middle;
+  background: url(../images/sprite-img.png);
+}
+
+.news .news-bar li:nth-child(1) a {
+  background-position: -546px -393px;
+}
+
+.news .news-bar li:nth-child(2) a {
+  background-position: -391px -393px;
+}
+
+.news .news-bar li:nth-child(3) a {
+  background-position: -391px -306px;
+}
+
+.news .news-bar li:nth-child(4) a {
+  background-position: -550px -306px;
+}
+
+.news .news-bar li:nth-child(5) a {
+  background-position: -444px -306px;
+}
+
+/* 新闻列表 */
+.news-wrap {
+  display: none;
+  /* 更多 */
+}
+
+.news-wrap:nth-of-type(1) {
+  display: block;
+}
+
+.news-wrap .more {
+  width: 530px;
+  height: 38px;
+  background-color: #e5e5e5;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 38px;
+  color: grey;
+  font-size: 14px;
+}
+
+.news-wrap .more a {
+  color: #1EB8F3;
+}
+
+.news-wrap .more i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  background: url(../images/sprite-img.png);
+  background-position: -594px -163px;
+}
+
+/* 列表内容 */
+.news-list {
+  width: 530px;
+  margin: 20px auto 0;
+}
+
+.news-list h2 {
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 15px;
+}
+
+.news-list h2 a {
+  color: #1EB8F3;
+}
+
+.news-list li {
+  height: 47px;
+  line-height: 47px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.news-list .news-text {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 310px;
+  color: #4c4c4c;
+  font-size: 14px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.news-list .date {
+  font-size: 14px;
+  color: #b2b2b2;
+  float: right;
+}
+
+.news-list .box {
+  display: inline-block;
+  width: 53px;
+  height: 22px;
+  padding-right: 7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+  vertical-align: middle;
+  background: url(../images/sprite-img.png);
+}
+
+.news-list .yellow-box {
+  background-position: -502px -336px;
+}
+
+.news-list .red-box {
+  background-position: -449px -366px;
+}
+
+.news-list .green-box {
+  background-position: -506px -366px;
+}
+
+.news-list .blue-box {
+  background-position: -444px -336px;
+}
+
+.news-list .purple-box {
+  background-position: -391px -366px;
 }
