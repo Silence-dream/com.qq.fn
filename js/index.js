@@ -182,4 +182,10 @@ $(function () {
             `)
         }
     })
+    // 玩法中心 a标签
+    $("#playcenter .datail-btn").hover(function () {
+        $(this).css("opacity", "0.7");
+    }, function () {
+        $(this).removeAttr("style");
+    })
 });
