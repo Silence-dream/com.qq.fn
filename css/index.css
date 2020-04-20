@@ -918,3 +918,124 @@ body {
   background: url(../images/sprite-img.png);
   background-position: -391px -70px;
 }
+
+/* 视频中心 */
+.video {
+  position: relative;
+  width: 1350px;
+  margin: 254px auto 0;
+}
+
+.video .head {
+  position: relative;
+}
+
+.video .hotact-title {
+  display: inline-block;
+  width: 247px;
+  height: 49px;
+  vertical-align: middle;
+  background: url(../images/sprite-img.png);
+  background-position: 0 -562px;
+}
+
+.video .tab-bar {
+  width: 1044px;
+  height: 49px;
+  margin-left: 48px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+.video .tab-bar li {
+  position: relative;
+  line-height: 49px;
+  display: inline-block;
+  font-size: 16px;
+  color: #666;
+  margin-right: 35px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.video .more-btn {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 8px;
+}
+
+.video .content-list {
+  margin-top: 53px;
+}
+
+.video .content-list:after, .video .content-list:before {
+  content: "";
+  display: table;
+}
+
+.video .content-list:after {
+  clear: both;
+}
+
+.video .content-list {
+  *zoom: 1;
+}
+
+.video .content-list li {
+  position: relative;
+  float: left;
+  vertical-align: top;
+  width: 320px;
+  height: 220px;
+  margin: 0 8px 20px;
+}
+
+.video .content-list li:last-child {
+  margin-right: 0;
+}
+
+.video .content-list li:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.video .content-list .pic-box {
+  height: 179px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video .content-list img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.video .content-list .name {
+  height: 41px;
+  line-height: 41px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #333;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.video .content-list a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
