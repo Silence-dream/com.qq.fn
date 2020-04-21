@@ -496,8 +496,7 @@ $(function () {
     })
 
 
-    /* 控制背景图大小 */
-    $(".bg").css("width", $("html,body").width())
+
 
 
 
