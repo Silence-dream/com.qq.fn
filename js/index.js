@@ -498,4 +498,160 @@ $(function () {
 
     /* 控制背景图大小 */
     $(".bg").css("width", $("html,body").width())
+
+
+
+    /* 下拉菜单 下拉列表 */
+    $(".menu-list li").hover(function () {
+        $(".nav-mask").stop().slideDown();
+    }, function () {
+        $(".nav-mask").stop().slideUp();
+    })
+    $(".nav-mask").hover(function () {
+        $(".nav-mask").stop().slideDown();
+    }, function () {
+        $(".nav-mask").stop().slideUp();
+    })
+
+
+
+    /* 菜单栏固定导航 */
+    $(window).on("scroll", function () {
+        // 菜单栏的高度
+        let menuHeight = $(".top-meun").offset().top;
+        // 滚动高度
+        let moveHeight = $(this).scrollTop();
+        // console.log($(".top-meun").offset().top, $(this).scrollTop());
+        // 顶部菜单栏
+        if (moveHeight >= menuHeight) {
+            $(".top-meun").css({
+                "position": "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                "z-index": 999
+            });
+        }
+        if (menuHeight == 0) {
+            $(".top-meun").removeAttr("style")
+        }
+
+
+        // 右侧侧边栏 进入与出去
+        if (moveHeight >= $(".btn-check").offset().top) {
+            $(".slide-bar").css({
+                right: 0
+            })
+        } else {
+            $(".slide-bar").css({
+                right: -300
+            })
+        }
+
+        // 右侧侧边栏的楼梯导航
+        $(".part").each(function (index, ele) {
+            // console.log(ele);
+            if (moveHeight > $(ele).offset().top - 200) {
+                // 排他算法 清除行内式
+                $(".slide-icon").each(function (index, ele) {
+                    $(ele).removeAttr("style");
+                })
+                /* 分别让图标变蓝 */
+                if (index == 0) {
+                    $(".slide-icon").eq(index).css({
+                        backgroundPosition: "-496px -455px",
+                    })
+                } else if (index == 1) {
+                    $(".slide-icon").eq(index).css({
+                        backgroundPosition: "-432px -423px",
+                    })
+                } else if (index == 2) {
+                    $(".slide-icon").eq(index).css({
+                        backgroundPosition: "-508px -423px",
+                    })
+                } else if (index == 3) {
+                    $(".slide-icon").eq(index).css({
+                        backgroundPosition: "-461px -455px",
+                    });
+                }
+            }
+        })
+    })
+
+    // 点击侧边栏跳转
+    $(".slide-item").on("click", function (e) {
+        e.preventDefault();
+        let index = $(this).index() - 1;
+        console.log(index);
+        // console.log($(".part"));
+        if (index == 0) {
+            $("html,body").animate({
+                scrollTop: $(".part").eq(index).offset().top - 100
+            })
+            console.log("我的第" + index);
+        } else if (index == 1) {
+            $("html,body").animate({
+                scrollTop: $(".part").eq(index).offset().top - 100
+            })
+            console.log("我的第" + index);
+        } else if (index == 2) {
+            $("html,body").animate({
+                scrollTop: $(".part").eq(index).offset().top - 100
+            })
+            console.log("我的第" + index);
+        } else if (index == 3) {
+            $("html,body").animate({
+                scrollTop: $(".part").eq(index).offset().top - 100
+            })
+            console.log("我的第" + index);
+        }
+    })
+
+    // 鼠标移入变蓝
+    $(".slide-item").hover(function () {
+        // over
+        // 得到索引
+        let index = $(this).index() - 1;
+        if (index == 0) {
+            $(".slide-icon").eq(index).css({
+                backgroundPosition: "-496px -455px",
+            })
+        } else if (index == 1) {
+            $(".slide-icon").eq(index).css({
+                backgroundPosition: "-432px -423px",
+            })
+        } else if (index == 2) {
+            $(".slide-icon").eq(index).css({
+                backgroundPosition: "-508px -423px",
+            })
+        } else if (index == 3) {
+            $(".slide-icon").eq(index).css({
+                backgroundPosition: "-461px -455px",
+            });
+        }
+
+    }, function () {
+        // out
+        let index = $(this).index() - 1;
+        $(".slide-icon").eq(index).removeAttr("style");
+    });
+
+
+    // 点击返回顶部
+    $(".top").on("click", function () {
+        $("html,body").animate({
+            scrollTop: 0
+        })
+    });
+
+    // 微信二维码
+    $(".wx-icon").hover(function () {
+        // over
+        $(".qr-code").show();
+    }, function () {
+        // out
+        $(".qr-code").hide();
+    });
+
+
 });

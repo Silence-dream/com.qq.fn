@@ -255,6 +255,11 @@ body {
   border-bottom: 1px solid #1EB8F3;
 }
 
+/* 内容 */
+.g-wrap {
+  position: relative;
+}
+
 /* 菜单栏 */
 .top-meun {
   position: relative;
@@ -342,6 +347,7 @@ body {
 
 /* 下拉菜单 */
 .nav-mask {
+  display: none;
   position: absolute;
   top: 50px;
   left: 0;
@@ -387,6 +393,10 @@ body {
 .nav-mask a {
   color: #dbdbdb;
   font-size: 16px;
+}
+
+.nav-mask a:hover {
+  color: #F7DC4D;
 }
 
 /* banner */
@@ -1235,7 +1245,7 @@ body {
 /* 侧边栏导航 */
 .slide-bar {
   position: fixed;
-  right: 0;
+  right: -300px;
   top: 280px;
   width: 108px;
   -webkit-transition: all .8s ease;
@@ -1245,6 +1255,7 @@ body {
           box-sizing: border-box;
   text-align: center;
   background: url(../images/sprite-img.png) no-repeat;
+  z-index: 9997;
 }
 
 .slide-bar .uav {
@@ -1315,7 +1326,13 @@ body {
   background-position: -473px -244px;
 }
 
+.slide-bar .wx-icon:hover {
+  opacity: 0.7;
+  background-position: -563px -244px;
+}
+
 .slide-bar .wx-icon .qr-code {
+  display: none;
   position: absolute;
   top: -34px;
   left: -122px;
