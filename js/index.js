@@ -493,8 +493,15 @@ $(function () {
         </li>
             `)
         }
+        // 给a标签添加title
+        $("#video .content-list .name").each(function (index, ele) {
+            $("#video .content-list .pic-box").eq(index).siblings("a").prop("title", $(ele).text())
+        })
     })
-
+    // 页面载入给a标签添加title
+    $("#video .content-list .name").each(function (index, ele) {
+        $("#video .content-list .pic-box").eq(index).siblings("a").prop("title", $(ele).text())
+    })
 
 
 
@@ -505,8 +512,7 @@ $(function () {
         $(".nav-mask").stop().slideDown();
     }, function () {
         $(".nav-mask").stop().slideUp();
-    })
-    $(".nav-mask").hover(function () {
+    }), $(".nav-mask").hover(function () {
         $(".nav-mask").stop().slideDown();
     }, function () {
         $(".nav-mask").stop().slideUp();
