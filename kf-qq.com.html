@@ -5,10 +5,629 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./lib/jQuery/jquery-3.4.1.js"></script>
+    <!-- 引入自己的CSS -->
+    <link rel="stylesheet" href="./css/kf-qq.com.css">
 </head>
 
 <body>
+    <div class="kf-header-wrap">
+        <!-- 登陆  隐藏-->
+        <div class="web_login" style="display: none;">
+            <!-- 遮罩层 -->
+            <div class="login-mask"></div>
+            <div class="login-dialog">
+                <div class="m-login">
+                    <!-- X号 -->
+                    <i class="iconfont">&#xe699;</i>
+                    <div class="login-tab">
+                        <div class="tab-item">选择登录帐号类型</div>
+                    </div>
+                    <div class="login-style">
+                        <div class="login-item">请以使用产品时遇到问题的帐号进行登录。</div>
+                        <div class="login-fail">若帐号无法登录，可
+                            <a data-kftag="login.cannot_login" target="_blank" href="javascript:;">
+                                点击这里
+                            </a>
+                        </div>
+                        <!-- QQ 微信 -->
+                        <div class="login-choice">
+                            <div class="style-item ">
+                                <img class="app-pic" src="./images/wechat.png">
+                                <div class="label">微信</div>
+                            </div>
+                            <div class="style-item ">
+                                <img class="app-pic" src="./images/qq.png">
+                                <div class="label">QQ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kf-header">
+            <div class="header-inner">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="javascript:;"></a>
+                </div>
+                <!-- 搜索 -->
+                <div class="mod-search">
+                    <input class="search-input" placeholder="在腾讯客服中搜索帮助">
+                    <div class="search-incon">
+                        <i class="iconfont">&#xe63f;</i>
+                    </div>
+                </div>
+                <!-- 公告 -->
+                <div class="notice">
+                    <i class="iconfont">&#xe6a8;</i>
+                    <a href="javascript:;">腾讯客服招聘啦！！</a>
+                </div>
+                <!-- 登陆按钮 -->
+                <div class="login-btn">
+                    <a href="javascript:;">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner  -->
+    <div class="kf-slider">
+        <div class="slider-inner">
+            <div class="slide-item">
+                <video class="banner-video" src="./video/index-video.mp4" loop="" autoplay="" preload="" muted="">
+                </video>
+            </div>
+        </div>
+        <div class="slider-bottom">
+            <div class="prejudge-box">
+                <div class="left">
+                    <div class="left-content">
+                        <h2 class="left-title">常见问题</h2>
+                        <div class="left-btn">
+                            <i class="iconfont">
+                                &#xe65c;
+                            </i>
+                            换一换
+                        </div>
+                        <ul class="left-list">
+                            <li>
+                                <a href="javascript:;">怎么样才能提升好友上限（QQ会员各等级好友上限）？</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">如何关闭用手机短信开通包月的QQ会员</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">如何关闭/取消黄钻服务？</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">手机上传相片到QQ相册，怎样才能显示？</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">如何使用腾讯QQ卡充值？</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">充值成功但Q币没有到帐，怎么办？</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul class="right-list">
+                        <li>
+                            <a href="javascript:;">
+                                <img src="./images/baohu.png" alt="">
+                                <p>账号保护</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="./images/wechat2.png" alt="">
+                                <p>微信</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="./images/qq2.png" alt="">
+                                <p>QQ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner结束 -->
+    <!-- nav导航 -->
+    <div class="kf-nav">
+        <div class="nav-inner">
+            <div class="mod-nav">
+                <ul class="index-nav">
+                    <li class="item">
+                        <span class="item-text">微信相关</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-text">QQ相关</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-text">游戏相关</span>
+                    </li>
+                    <li class="item">
+                        <span class="item-text">其他产品</span>
+                    </li>
+                </ul>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <!-- nav导航结束 -->
+    <!-- 微信相关服务 -->
+    <div class="mod-rowbox wechat-box stairs">
+        <h2 class="title-h2">微信相关服务</h2>
+        <!-- 左 -->
+        <div class="rowbox-left">
+            <h3 class="title-h3">热门问题</h3>
+            <ul class="list-txt">
+                <li class="item">
+                    <a href="javascript:;">微信支付商户自查违规记录/申诉指引</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">微信认证年审相关说明</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">微信认证审核中资料是否支持修改</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">微信认证费用申请开具纸质发票相关问题</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">微信支付原主体商户号解绑操作指引</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">企业微信申请接入微信支付时，如何确认绑定关系？</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">小程序微信认证申请流程指引</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">申请接入-账户验证及签约指引</a>
+                </li>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">APP支付接入方法指引</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">公众平台改名原名称释放问题</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">微信支付智慧经营2.0介绍</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">微信认证申请流程（政府/事业单位类型）</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 右边 -->
+        <div class="rowbox-right">
+            <h3 class="title-h3">帮助专区</h3>
+            <ul class="product-text">
+                <li class="item">
+                    <img src="./images/gongzonghao.png" alt="">
+                    <p>公众号</p>
+                </li>
+                <li class="item">
+                    <img src="./images/wechat2.png" alt="">
+                    <p>微信</p>
+                </li>
+                <li class="item">
+                    <img src="./images/wechatshop.png" alt="">
+                    <p>微信支付商户</p>
+                </li>
+                <li class="item">
+                    <img src="./images/wechatpay.png" alt="">
+                    <p>微信支付</p>
+                </li>
+                <li class="item">
+                    <img src="./images/wechatopen.png" alt="">
+                    <p>开放平台</p>
+                </li>
+                <li class="item">
+                    <img src="./images/wechatsmail.png" alt="">
+                    <p>微信小程序</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 微信相关服务结束 -->
 
+    <!-- QQ相关服务 -->
+    <div class="mod-rowbox QQ-box stairs">
+        <h2 class="title-h2">QQ相关服务</h2>
+        <!-- 左 -->
+        <div class="rowbox-left">
+            <h3 class="title-h3">热门问题</h3>
+            <ul class="list-txt">
+                <li class="item">
+                    <a href="javascript:;">QQ群修改群名称为什么提示含敏感词？</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">怎么修改QQ群文件中显示的上传者名字？</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">QQ群资料怎么修改？</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">QQ群诊断指引</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">QQ群群主及管理员有哪些权限？</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">好友身份验证功能</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">QQ群成员标签怎么设置?</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">QQ群被他人恶意举报，怎么办？</a>
+                </li>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">手机QQ附近好友诊断指引</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">QQ群恢复规则介绍</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">付费入群功能使用条件</a>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">好友互动标识常见问题</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 右边 -->
+        <div class="rowbox-right">
+            <h3 class="title-h3">帮助专区</h3>
+            <ul class="product-text">
+                <li class="item">
+                    <img src="./images/qq2.png" alt="">
+                    <p>QQ</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqvip.png" alt="">
+                    <p>QQ会员</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qb.png" alt="">
+                    <p>Q币充值</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qzone.png" alt="">
+                    <p>QQ空间</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqpayman.png" alt="">
+                    <p>财付通个人版</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqpayqiye.png" alt="">
+                    <p>财付通企业版</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqqun.png" alt="">
+                    <p>QQ群</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqqianbaoshanghu.png" alt="">
+                    <p>QQ钱包商户平台</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqqianbao.png" alt="">
+                    <p>QQ钱包</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqxiaochengxu.png" alt="">
+                    <p>QQ小程序</p>
+                </li>
+                <li class="item">
+                    <img src="./images/qqshopopen.png" alt="">
+                    <p>商户公众平台</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- QQ相关服务结束 -->
+
+    <!-- 电脑游戏服务 -->
+    <div class="mod-rowbox game-box stairs">
+        <h2 class="title-h2">电脑游戏服务</h2>
+        <ul class="product-list">
+            <li class="item">
+                <img src="./images/dnf.png" alt="">
+                <p>DNF地下城与勇士</p>
+            </li>
+            <li class="item">
+                <img src="./images/lol.png" alt="">
+                <p>英雄联盟</p>
+            </li>
+            <li class="item">
+                <img src="./images/cf.png" alt="">
+                <p>CF穿越火线</p>
+            </li>
+            <li class="item">
+                <img src="./images/pubg.png" alt="">
+                <p>绝地求生端游</p>
+            </li>
+            <li class="item">
+                <img src="./images/Fortnite.png" alt="">
+                <p>堡垒之夜</p>
+            </li>
+            <li class="item">
+                <img src="./images/nizhan.png" alt="">
+                <p>逆战</p>
+            </li>
+            <li class="item">
+                <img src="./images/ffo4.png" alt="">
+                <p>FIFAOL4</p>
+            </li>
+            <li class="item">
+                <img src="./images/DutyOL.png" alt="">
+                <p>使命召唤Online</p>
+            </li>
+            <li class="item">
+                <img src="./images/jianlinm.png" alt="">
+                <p>剑灵</p>
+            </li>
+            <li class="item">
+                <img src="./images/xuanwu.png" alt="">
+                <p>QQ炫舞</p>
+            </li>
+            <li class="item">
+                <img src="./images/jfzr.png" alt="">
+                <p>疾风之刃JFZR</p>
+            </li>
+            <li class="item">
+                <img src="./images/qqsanguo.png" alt="">
+                <p>QQ三国</p>
+            </li>
+            <li class="item">
+                <img src="./images/qqhuaxia.png" alt="">
+                <p>QQ华夏</p>
+            </li>
+            <li class="item">
+                <img src="./images/xunxian.png" alt="">
+                <p>寻仙</p>
+            </li>
+            <li class="item">
+                <img src="./images/yulong.png" alt="">
+                <p>御龙在天</p>
+            </li>
+            <li class="item">
+                <img src="./images/qqgames.png" alt="">
+                <p>QQ游戏</p>
+            </li>
+            <li class="item">
+                <img src="./images/HunterOL.png" alt="">
+                <p>怪物猎人online</p>
+            </li>
+            <li class="item">
+                <img src="./images/nba.png" alt="">
+                <p>NBA2KOL2</p>
+            </li>
+            <li class="item">
+                <img src="./images/shanggu.png" alt="">
+                <p>上古世纪</p>
+            </li>
+            <li class="item">
+                <img src="./images/qqcar.png" alt="">
+                <p>QQ飞车</p>
+            </li>
+            <li class="item">
+                <img src="./images/tiandao.png" alt="">
+                <p>天涯明月刀</p>
+            </li>
+            <li class="item">
+                <img src="./images/liufang.png" alt="">
+                <p>流放之路</p>
+            </li>
+            <li class="item">
+                <img src="./images/jianlinghongmeng.png" alt="">
+                <p>剑灵洪门崛起</p>
+            </li>
+            <li class="item">
+                <img src="./images/maoxiandao.png" alt="">
+                <p>冒险岛2</p>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 电脑游戏服务结束 -->
+
+    <!-- 手机游戏服务 -->
+    <div class="mod-rowbox phone-box">
+        <h2 class="title-h2">手机游戏服务</h2>
+        <ul class="product-list">
+            <li class="item">
+                <img src="./images/nongyao.png" alt="">
+                <p>王者荣耀</p>
+            </li>
+            <li class="item">
+                <img src="./images/wanmeiworld.png" alt="">
+                <p>完美世界</p>
+            </li>
+            <li class="item">
+                <img src="./images/huoyin.png" alt="">
+                <p>火影忍者手游</p>
+            </li>
+            <li class="item">
+                <img src="./images/cfphone.png" alt="">
+                <p>CF手游</p>
+            </li>
+            <li class="item">
+                <img src="./images/duoduo.png" alt="">
+                <p>多多自走棋</p>
+            </li>
+            <li class="item">
+                <img src="./images/heping.png" alt="">
+                <p>和平精英</p>
+            </li>
+            <li class="item">
+                <img src="./images/zhuoyao.png" alt="">
+                <p>一起来捉妖</p>
+            </li>
+            <li class="item">
+                <img src="./images/yaojin.png" alt="">
+                <p>妖精的尾巴</p>
+            </li>
+            <li class="item">
+                <img src="./images/swich.png" alt="">
+                <p>Switch</p>
+            </li>
+            <li class="item">
+                <img src="./images/dengta.png" alt="">
+                <p>少年灯塔</p>
+            </li>
+            <li class="item">
+                <img src="./images/tengxungame.png" alt="">
+                <p>更多游戏</p>
+            </li>
+
+
+        </ul>
+    </div>
+    <!-- 手机游戏服务结束 -->
+
+    <!-- 其他产品 -->
+    <div class="mod-rowbox other-box stairs">
+        <h2 class="title-h2">其他产品</h2>
+        <ul class="product-list">
+            <li class="item">
+                <img src="./images/licaitong.png" alt="">
+                <p>腾讯理财通</p>
+            </li>
+            <li class="item">
+                <img src="./images/kongzhong.png" alt="">
+                <p>腾讯教育空中课堂</p>
+            </li>
+            <li class="item">
+                <img src="./images/wenxue.png" alt="">
+                <p>腾讯文学</p>
+            </li>
+            <li class="item">
+                <img src="./images/tiyu.png" alt="">
+                <p>腾讯体育</p>
+            </li>
+            <li class="item">
+                <img src="./images/dongman.png" alt="">
+                <p>腾讯动漫</p>
+            </li>
+            <li class="item">
+                <img src="./images/weiyun.png" alt="">
+                <p>微云</p>
+            </li>
+            <li class="item">
+                <img src="./images/diannaoguanjia.png" alt="">
+                <p>腾讯电脑管家</p>
+            </li>
+            <li class="item">
+                <img src="./images/qqemail.png" alt="">
+                <p>QQ邮箱</p>
+            </li>
+            <li class="item">
+                <img src="./images/tengxunmap.png" alt="">
+                <p>腾讯地图</p>
+            </li>
+            <li class="item">
+                <img src="./images/vvip.png" alt="">
+                <p>超级影视VIP</p>
+            </li>
+            <li class="item">
+                <img src="./images/videovip.png" alt="">
+                <p>腾讯视频</p>
+            </li>
+            <li class="item">
+                <img src="./images/tengxunword.png" alt="">
+                <p>腾讯文档</p>
+            </li>
+            <li class="item">
+                <img src="./images/guanli.png" alt="">
+                <p>数字商品管理</p>
+            </li>
+        </ul>
+    </div>
+    <!-- 其他产品结束 -->
+    <!-- 底部版权 -->
+    <div class="kf-footer">
+        <div class="footer-inner">
+            <h2>
+                <a href="javascript:;">
+                    关于腾讯客服
+                    <i class="iconfont">&#xe646;</i>
+                </a>
+
+            </h2>
+            <div class="footer-left">
+                <h3>服务热线</h3>
+                <ul class="content">
+                    <li class="list-item">
+                        <span class="txt">腾讯服务热线</span>
+                        <span class="desc">0755-83765566</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="txt">财付通/手Q钱包专线</span>
+                        <span class="desc">0755-86013860</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="txt">微信支付/理财通专线</span>
+                        <span class="desc">95017</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="txt">未成年人游戏监管热线</span>
+                        <span class="desc">95092666</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <div class="item">
+                    <img src="./images/flower-code.png" alt="">
+                    <p>使用微信小程序</p>
+                </div>
+                <div class="item">
+                    <img src="./images/index-code.png" alt="">
+                    <p>关注微博公众号</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="p1">
+                    <a href="javascript:;">关于腾讯</a> |
+                    <a href="javascript:;">
+                        about Tencent
+                    </a> |
+                    <a href="javascript:;">
+                        服务条款
+                    </a>
+                </p>
+                <p class="p2 ">
+                    Copyright © 1998 - 2020 Tencent. All Rights Reserved. 腾讯公司 版权所有 粤网文[2017]6138-1456号
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部版权结束 -->
+    <!-- 侧边栏 -->
+    <div class="side">
+        <div class="side-header">
+            <a href="javascript:;">
+                <img src="./images/index-code.png" alt="">
+            </a>
+        </div>
+        <div class="side-content">
+            <p>关注微信公众号</p>
+            <p>向腾讯客服提问</p>
+        </div>
+    </div>
+    <!-- 侧边栏结束 -->
+    <script src=" ./js/kf-qq.com.js"> </script>
 </body>
 
 </html>
