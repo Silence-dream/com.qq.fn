@@ -1,5 +1,6 @@
 $(function () {
     /* 登陆显示遮罩层 */
+    ;
     (function () {
         $(".login-btn a").on("click", function () {
             $(".web_login").show();
@@ -48,7 +49,7 @@ $(function () {
         /* nav 导航固定 bar */
         $(".stairs").each(function (index, ele) {
             let height = parseInt($(ele).offset().top);
-            if (moveHeight >= height) {
+            if (moveHeight >= height - 93 * 2) {
                 // console.log(index);
                 if (index == 0) {
                     $('.bar').css('transform', "translate3d(67.5px, 0px, 0px)");
@@ -71,7 +72,7 @@ $(function () {
             $(".side").stop().animate({
                 top: 413.5
             })
-            console.log(111111111);
+            // console.log(111111111);
         } else if (moveHeight == 0) {
             $(".side").stop().animate({
                 top: 748
@@ -95,10 +96,19 @@ $(function () {
 
     /* 页面滚动效果结束*/
 
-    // element.scrollTop
+
+    /* 点击谁 bar到谁 */
+    $(".index-nav .item").on("click", function () {
+        // 得到点击的索引
+        let index = $(this).index();
+        // 跳转的高度
+        let height = $(".stairs").eq(index).offset().top;
+        $("html,body").scrollTop(height - 93 * 2);
+    })
 
 
     /* 刷新页面在当前位置显示相印的效果 */
+    ;
     (function () {
         let moveHeight = $(this).scrollTop();
         /* bar start */
@@ -133,7 +143,7 @@ $(function () {
             $(".kf-nav").removeClass("nav-current")
         }
         /* nav 导航固定end */
-    }())
+    }());
 
 
 

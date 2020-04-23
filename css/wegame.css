@@ -1,0 +1,1015 @@
+@charset "UTF-8";
+/* 清除浮动 */
+/* 字体图标 */
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff2") format("woff2"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 样式初始化 */
+/* reset */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+  border: 0;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+
+[hidefocus],
+summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+}
+
+sup,
+sub {
+  font-size: 83%;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: inherit;
+}
+
+q:before,
+q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label,
+summary {
+  cursor: default;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+  font-weight: bold;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+  font: 12px/1.14 arial, "Microsoft YaHei";
+  color: #333;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a,
+a:hover {
+  color: #333;
+}
+
+#zSlider {
+  position: relative;
+  margin: 0px auto;
+  width: 1000px;
+  overflow: hidden;
+}
+
+#picshow {
+  position: relative;
+}
+
+#picshow,
+#picshow_img {
+  overflow: hidden;
+  float: left;
+}
+
+#picshow_img li {
+  width: 1000px;
+  height: 390px;
+  overflow: hidden;
+  float: left;
+  display: none;
+}
+
+#picshow_img img {
+  width: 1000px;
+  height: 390px;
+}
+
+#picshow_tx {
+  left: 0px;
+  width: 880px;
+  bottom: 0px;
+  position: absolute;
+  height: 90px;
+  overflow: hidden;
+}
+
+#picshow_tx li {
+  background: url(../images/picshow_bg.png) repeat;
+  padding: 10px 30px;
+  height: 70px;
+  color: #fff;
+  display: none;
+}
+
+#picshow_tx li a {
+  color: #fff;
+}
+
+#picshow_tx li a:hover {
+  text-decoration: underline;
+}
+
+#picshow_tx li h3 {
+  margin: 13px 0;
+}
+
+#picshow_tx li p {
+  color: #ccc;
+  line-height: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+#select_btn li {
+  width: 214px;
+  height: 55.71429px;
+  border-top: 1px solid #474747;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+#select_btn li:hover {
+  background-color: #292929;
+}
+
+#select_btn li a:hover {
+  color: aliceblue;
+}
+
+#select_btn li.current {
+  background-color: #1a1a1a;
+}
+
+#select_btn li.current a {
+  color: #db7d05;
+}
+
+#select_btn li.current:hover {
+  background-color: #292929;
+}
+
+#select_btn a {
+  color: #ffffff;
+}
+
+#select_btn {
+  position: absolute;
+  float: right;
+  right: 0;
+  width: 214px;
+  height: 390px;
+  color: #111;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#select_btn img {
+  padding: 2px;
+  border: 1px solid #ccc;
+  width: 70px;
+  height: 49px;
+  margin-right: 10px;
+  float: left;
+}
+
+#select_btn .select_text {
+  height: 20px;
+  font: bold 13px/16px "Microsoft YaHei";
+  display: block;
+  padding: 15px 0 0 20px;
+}
+
+#select_btn .select_date {
+  height: 23px;
+  line-height: 23px;
+  overflow: hidden;
+  display: block;
+}
+
+#foot_bm a,
+#foot_bm,
+p,
+p a {
+  color: #666;
+}
+
+body {
+  height: 5000px;
+  color: green;
+}
+
+body:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #eee url(../images/store-bg.jpg) no-repeat 50% 0;
+  z-index: -100;
+  pointer-events: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header-warp {
+  height: 80px;
+  background: #191919;
+}
+
+.header-warp .header-content {
+  width: 100%;
+  min-width: 1200px;
+  line-height: 80px;
+  height: 100%;
+}
+
+.header-warp .header-content:after, .header-warp .header-content:before {
+  content: "";
+  display: table;
+}
+
+.header-warp .header-content:after {
+  clear: both;
+}
+
+.header-warp .header-content {
+  *zoom: 1;
+}
+
+.header-warp .logo {
+  float: left;
+  width: 233px;
+  height: 40px;
+  margin-left: 30px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background: url(../images/wegame-logo-40.776e17ff.png);
+}
+
+.header-warp .nav {
+  float: left;
+  height: 100%;
+  margin-left: 164px;
+}
+
+.header-warp .nav:after, .header-warp .nav:before {
+  content: "";
+  display: table;
+}
+
+.header-warp .nav:after {
+  clear: both;
+}
+
+.header-warp .nav {
+  *zoom: 1;
+}
+
+.header-warp .nav li {
+  float: left;
+  margin: 0 12px;
+  height: 100%;
+}
+
+.header-warp .nav a {
+  padding: 0 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-warp .nav a:hover {
+  color: #ffffff;
+}
+
+.header-warp .login {
+  float: right;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: normal;
+  margin-right: 50px;
+}
+
+.header-warp .login:after, .header-warp .login:before {
+  content: "";
+  display: table;
+}
+
+.header-warp .login:after {
+  clear: both;
+}
+
+.header-warp .login {
+  *zoom: 1;
+}
+
+.header-warp .login a {
+  float: left;
+  height: 36px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0 20px;
+  line-height: 36px;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+.header-warp .login a:nth-child(1):hover, .header-warp .login a:nth-child(3):hover {
+  color: #ffffff;
+}
+
+.header-warp .login a:nth-child(2) {
+  border: 1px solid #303030;
+}
+
+.header-warp .login a:nth-child(2):hover {
+  color: #333333;
+  background-color: #ffc800;
+}
+
+/* 搜索 */
+.wegame-search {
+  height: 50px;
+  line-height: 50px;
+}
+
+.wegame-search .home-nav {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wegame-search .home-nav:after, .wegame-search .home-nav:before {
+  content: "";
+  display: table;
+}
+
+.wegame-search .home-nav:after {
+  clear: both;
+}
+
+.wegame-search .home-nav {
+  *zoom: 1;
+}
+
+.wegame-search .nav-list {
+  float: left;
+  cursor: pointer;
+}
+
+.wegame-search .nav-list:after, .wegame-search .nav-list:before {
+  content: "";
+  display: table;
+}
+
+.wegame-search .nav-list:after {
+  clear: both;
+}
+
+.wegame-search .nav-list {
+  *zoom: 1;
+}
+
+.wegame-search .nav-list li {
+  float: left;
+}
+
+.wegame-search .nav-list li:hover {
+  background: #f4f4ff;
+}
+
+.wegame-search .nav-list li a {
+  color: #3c3c3c;
+}
+
+.wegame-search .nav-list li:nth-child(1) a {
+  padding: 0 15px;
+}
+
+.wegame-search .nav-list li:nth-child(2) {
+  position: relative;
+}
+
+.wegame-search .nav-list li:nth-child(2) > a {
+  padding: 0 19px 0 19px;
+}
+
+.wegame-search .nav-list i {
+  vertical-align: middle;
+}
+
+.wegame-search .nav-list .list {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.wegame-search .nav-list .list a {
+  display: inline-block;
+  padding-right: 38px;
+  padding-left: 19px;
+}
+
+.wegame-search .nav-list .list a:hover {
+  background: #f4f4ff;
+}
+
+.wegame-search .hots-search {
+  float: left;
+  margin-left: 270px;
+  cursor: pointer;
+}
+
+.wegame-search .hots-search li {
+  float: left;
+}
+
+.wegame-search .hots-search li:hover {
+  background: #f4f4ff;
+}
+
+.wegame-search .hots-search li:nth-child(2) a {
+  position: relative;
+}
+
+.wegame-search .hots-search li:nth-child(2) a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 1px;
+  height: 10px;
+  background: #bfbfbf;
+}
+
+.wegame-search .hots-search li:nth-child(2) a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 6px;
+  width: 1px;
+  height: 10px;
+  background: #bfbfbf;
+}
+
+.wegame-search .hots-search li:nth-child(3) a {
+  position: relative;
+  color: #ff9600;
+}
+
+.wegame-search .hots-search li:nth-child(3) a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 6px;
+  width: 1px;
+  height: 10px;
+  background: #bfbfbf;
+}
+
+.wegame-search .hots-search li:nth-child(4) a {
+  position: relative;
+  color: #ff9600;
+}
+
+.wegame-search .hots-search a {
+  padding: 0 15px 0 0;
+}
+
+.wegame-search .tui-search {
+  float: left;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.wegame-search .tui-search input {
+  width: 190px;
+  height: 30px;
+  border: 1px solid #ffe493;
+  border-radius: 60px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 3px 25px 3px 15px;
+}
+
+.wegame-search .tui-search span {
+  display: inline-block;
+  width: 48px;
+  height: 30px;
+  color: #4d3c26;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ffe493;
+  border-radius: 60px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* 搜索结束 */
+/* 背景大图 */
+.big-img {
+  position: relative;
+  width: 100%;
+}
+
+.big-img a {
+  display: inline-block;
+  max-width: 1920px;
+  min-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.big-img img {
+  width: 100%;
+  height: 568px;
+}
+
+.big-img .big-img-mo {
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 400px;
+  height: 60px;
+}
+
+.big-img .big-img-btn {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  bottom: 0;
+  width: 86px;
+  height: 30px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: url(../images/big-btn.png);
+  cursor: pointer;
+}
+
+.big-img i {
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: #8c8c8c;
+}
+
+/* 背景大图结束 */
+/* 垂直轮播图 */
+/* 垂直轮播图结束 */
+.dvAppointment {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  height: 490px;
+}
+
+.dvAppointment .viewport {
+  overflow: hidden;
+  height: inherit;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.dvAppointment .vi-header {
+  height: 70px;
+}
+
+.dvAppointment .vi-header:after, .dvAppointment .vi-header:before {
+  content: "";
+  display: table;
+}
+
+.dvAppointment .vi-header:after {
+  clear: both;
+}
+
+.dvAppointment .vi-header {
+  *zoom: 1;
+}
+
+.dvAppointment .vi-header h2 {
+  position: relative;
+  font-size: 28px;
+  color: #3c3c3c;
+  line-height: 70px;
+  height: 70px;
+  max-width: 820px;
+}
+
+.dvAppointment .vi-content {
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.dvAppointment .vi-content:after, .dvAppointment .vi-content:before {
+  content: "";
+  display: table;
+}
+
+.dvAppointment .vi-content:after {
+  clear: both;
+}
+
+.dvAppointment .vi-content {
+  *zoom: 1;
+}
+
+.dvAppointment #vidv-list {
+  position: relative;
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.dvAppointment .vi-items {
+  position: relative;
+  width: 184px;
+  height: 398px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 76px;
+  margin-right: 20px;
+  margin-top: 70px;
+}
+
+.dvAppointment .vi-items:after, .dvAppointment .vi-items:before {
+  content: "";
+  display: table;
+}
+
+.dvAppointment .vi-items:after {
+  clear: both;
+}
+
+.dvAppointment .vi-items {
+  *zoom: 1;
+}
+
+.dvAppointment .vi-items:before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 222px;
+  right: 0;
+  border-top: 2px solid #ffb300;
+  z-index: 10;
+}
+
+.dvAppointment .vi-items:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  width: 4px;
+  height: 4px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  z-index: 10;
+  border-left: 6px solid #eee;
+  border-right: 6px solid #eee;
+  margin-left: -10px;
+  background-color: #ffb300;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.dvAppointment .future-game-item {
+  position: absolute;
+  top: 0;
+}
+
+.dvAppointment .future-game-item .date-flow {
+  position: absolute;
+  top: -54px;
+  left: 49px;
+}
+
+.dvAppointment .future-game-item .date-flow-date {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  min-width: 80px;
+  color: #3c3c3c;
+  font-size: 15px;
+  text-align: center;
+}
+
+.dvAppointment .future-game-item .date-flow-desc {
+  height: 19px;
+  font-size: 13px;
+  margin-left: 12px;
+  margin-top: 2px;
+  color: #757575;
+}
+
+.dvAppointment .date-content {
+  position: relative;
+  height: 242px;
+  width: 184px;
+}
+
+.dvAppointment .date-content a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dvAppointment .date-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.dvAppointment .date-info {
+  position: relative;
+  top: -48px;
+  width: 100%;
+  min-height: 120px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  padding: 19px 16px 0;
+  margin: -10px 0 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  margin-top: 8px;
+  background-color: #ffffff;
+}
+
+.dvAppointment .date-info h3 {
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #3c3c3c;
+  text-overflow: ellipsis;
+}
+
+.dvAppointment .date-info span {
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #757575;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dvAppointment .gcard-infobtn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  margin-bottom: -40px;
+  width: 100%;
+  color: #3c3c3c;
+  background-color: #ffffff;
+}
+
+.dvAppointment .gcard-infobtn div {
+  float: left;
+  width: 91px;
+  height: 100%;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #e4e4e4;
+}
+
+.dvAppointment .gcard-infobtn div:nth-child(1) {
+  border-right: none;
+}
+
+.dvAppointment .incon {
+  position: absolute;
+  top: -12px;
+  left: 26px;
+  width: 38px;
+  height: 24px;
+  background: url(../images/noshp_tag-bg.png) no-repeat;
+  background-size: 100% 160px;
+  background-position: 0 -75px;
+  text-align: center;
+}
+
+.dvAppointment .incon:before {
+  content: "";
+  width: 10px;
+  height: 24px;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  background: url(../images/noshp_tag-bg.png) no-repeat;
+  background-position: 0 -50px;
+}
+
+.dvAppointment .incon:after {
+  content: "";
+  width: 10px;
+  height: 24px;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  background: url(../images/noshp_tag-bg.png) no-repeat;
+  background-position: -11px -50px;
+}
+
+.dvAppointment .incon span {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.dvAppointment .vi-btn {
+  height: 0;
+}
+
+.dvAppointment .vi-pre,
+.dvAppointment .vi-next {
+  position: absolute;
+  width: 30px;
+  height: 68px;
+  background-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+  line-height: 68px;
+  cursor: pointer;
+}
+
+.dvAppointment .vi-pre:hover,
+.dvAppointment .vi-next:hover {
+  background-color: #787878;
+}
+
+.dvAppointment .vi-pre i,
+.dvAppointment .vi-next i {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.dvAppointment .vi-pre {
+  top: 50%;
+  left: -40px;
+  z-index: 999;
+}
+
+.dvAppointment .vi-next {
+  top: 50%;
+  right: -40px;
+  z-index: 999;
+}
