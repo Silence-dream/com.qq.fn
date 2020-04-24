@@ -151,20 +151,90 @@ $(function () {
     /* 热门活动轮播图 */
     ;
     (function () {
-        let ulWidth = $("#vidv-list .vi-items").length * 100
+        let ulWidth = $("#vidv-list .vi-items").length
         // console.log(ulWidth);
-        $("#vidv-list").css("width", ulWidth + "%")
+        $("#vidv-list").css("width", ulWidth * 100 + "%")
 
 
         /* 左 */
         /* -225px */
-        // let 
-        /* 点一次走184px */
+        // 记录点击次数
+        let count = 0;
+        // 得到最多能点几次   就是轮播图item-5
+        let maxCount = ulWidth - 5;
+        /* 点一次走184px+20 */
         $(".vi-pre").on("click", function () {
-            $("#vidv-list").animate({
-                left: -225
-            })
+            count++;
+            if (count <= maxCount) {
+                $("#vidv-list").animate({
+                    left: (-184 + -20) * count
+                })
+            }
             // $(this).css({'transform':'translateX(300px)'});
         })
+        $(".vi-next").on("click", function () {
+            // count++;
+            count = 0
+            $("#vidv-list").animate({
+                left: (184 + 20) * count
+            })
+
+            // $(this).css({'transform':'translateX(300px)'});
+        })
+    }())
+
+
+
+
+
+
+
+
+
+
+
+    /* 排行榜宽度 */
+    ;
+    (function () {
+        let num = $(".more-tui .more-items").length;
+        let width = $('.more-items').width() + 20; //20是marin值
+        $(".more-tui").css("width", num * width)
+    }())
+
+
+
+
+
+
+
+
+
+    /* 蛋蛋君轮播图 */
+    ;
+    (function () {
+
+        //  移动的值
+        let move = $(".dandan-focus .dandan-items").innerWidth();
+        // 得到ul的当前位置
+        let nowMove = parseInt($(".dandan-list").css("left"))
+
+        // 最大移动距离
+        // 左边
+        let maxLeft;
+        
+        // 移动的量等于 nowMove +-  move
+        // 左
+        $('.dandan-btn-left').on("click", function () {
+            $(".dandan-list").animate({
+                left: nowMove -= move
+            })
+        })
+        // 右
+        $('.dandan-btn-right').on("click", function () {
+            $(".dandan-list").animate({
+                left: nowMove += move
+            })
+        })
+
     }())
 });
