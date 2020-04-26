@@ -1600,14 +1600,22 @@ body:after {
 
 .dandan-list .dandan-items {
   float: left;
-  padding-right: 8px;
+  margin-right: 8px;
   width: 168px;
   height: 90px;
+  overflow: hidden;
+}
+
+.dandan-list .dandan-items:hover img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .dandan-list .dandan-items img {
-  width: 160px;
+  width: 168px;
   height: 90px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 /* 轮播图按钮 */
@@ -1657,3 +1665,212 @@ body:after {
 }
 
 /* 蛋蛋君推荐游戏结束 */
+/* 最新更新 */
+.recent-update {
+  margin-top: 20px;
+}
+
+.skin-panel-inner {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.skin-panel-inner:after, .skin-panel-inner:before {
+  content: "";
+  display: table;
+}
+
+.skin-panel-inner:after {
+  clear: both;
+}
+
+.skin-panel-inner {
+  *zoom: 1;
+}
+
+.skin-panel-inner .header-title {
+  height: 70px;
+}
+
+.skin-panel-inner .header-title h2 {
+  font-size: 28px;
+  color: #3c3c3c;
+  line-height: 70px;
+}
+
+/* 最新更新轮播图 */
+.skin-hd:after, .skin-hd:before {
+  content: "";
+  display: table;
+}
+
+.skin-hd:after {
+  clear: both;
+}
+
+.skin-hd {
+  *zoom: 1;
+}
+
+.skin-hd .width-list-hd:after, .skin-hd .width-list-hd:before {
+  content: "";
+  display: table;
+}
+
+.skin-hd .width-list-hd:after {
+  clear: both;
+}
+
+.skin-hd .width-list-hd {
+  *zoom: 1;
+}
+
+.skin-hd .focus-list:after, .skin-hd .focus-list:before {
+  content: "";
+  display: table;
+}
+
+.skin-hd .focus-list:after {
+  clear: both;
+}
+
+.skin-hd .focus-list {
+  *zoom: 1;
+}
+
+.skin-hd .items-content {
+  position: relative;
+  padding: 0 15px;
+}
+
+.skin-hd .items-content:after, .skin-hd .items-content:before {
+  content: "";
+  display: table;
+}
+
+.skin-hd .items-content:after {
+  clear: both;
+}
+
+.skin-hd .items-content {
+  *zoom: 1;
+}
+
+.skin-hd .items {
+  display: inline-block;
+  width: 340px;
+  padding: 0 20px 0 0;
+  white-space: normal;
+  vertical-align: middle;
+  background-color: pink;
+  cursor: pointer;
+}
+
+.skin-hd .items-box {
+  width: 321px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skin-hd .items-box > a {
+  display: block;
+}
+
+.skin-hd .items-box > a:after, .skin-hd .items-box > a:before {
+  content: "";
+  display: table;
+}
+
+.skin-hd .items-box > a:after {
+  clear: both;
+}
+
+.skin-hd .items-box > a {
+  *zoom: 1;
+}
+
+.skin-hd .items-title {
+  width: 100%;
+  height: 180px;
+}
+
+.skin-hd .items-title img {
+  width: 100%;
+  height: 100%;
+}
+
+.skin-hd .game-poste {
+  position: absolute;
+  left: 20px;
+  height: 40px;
+  z-index: 1;
+  font-size: 14px;
+  color: #a4a4a4;
+}
+
+.skin-hd .game-poste:after, .skin-hd .game-poste:before {
+  content: "";
+  display: table;
+}
+
+.skin-hd .game-poste:after {
+  clear: both;
+}
+
+.skin-hd .game-poste {
+  *zoom: 1;
+}
+
+.skin-hd .game-poste > img {
+  position: absolute;
+  top: -30px;
+  width: 60px;
+  height: 80px;
+}
+
+.skin-hd .game-poste .game-poste-cont {
+  float: left;
+  margin-left: 70px;
+}
+
+.skin-hd .game-poste .game-poste-cont h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.skin-hd .game-poste .game-poste-end {
+  position: relative;
+  float: left;
+  margin-top: 7px;
+  font-size: 12px;
+  margin-left: 25px;
+}
+
+.skin-hd .game-poste .game-poste-end span {
+  line-height: 1.5;
+}
+
+.skin-hd .game-poste .game-poste-end .iconfont {
+  vertical-align: bottom;
+}
+
+.skin-hd .game-info {
+  position: relative;
+  margin-top: 50px;
+  z-index: 2;
+}
+
+.skin-hd .game-info h3 {
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.skin-hd .game-info p {
+  font-size: 14px;
+  color: #3c3c3c;
+}
+
+/* 最新更新轮播图结束 */
+/* 最新更新结束 */
