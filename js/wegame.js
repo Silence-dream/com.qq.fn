@@ -218,23 +218,100 @@ $(function () {
         // 得到ul的当前位置
         let nowMove = parseInt($(".dandan-list").css("left"))
 
-        // 最大移动距离
-        // 左边
-        let maxLeft;
-        
+        // 得到有多少张轮播图
+        let num = $(".dandan-list .dandan-items").length;
+        // 最大移动距离  (轮播图的数量-显示的数量)*move
+        // 左边 最大移动距离
+        let maxMove = (num - 3) * move;
         // 移动的量等于 nowMove +-  move
+
+        // 判断是否到底了
+
         // 左
+        $('.dandan-btn-left').css("opacity", 0.2);
         $('.dandan-btn-left').on("click", function () {
-            $(".dandan-list").animate({
-                left: nowMove -= move
-            })
-        })
-        // 右
-        $('.dandan-btn-right').on("click", function () {
-            $(".dandan-list").animate({
-                left: nowMove += move
-            })
+            if (nowMove < 0) {
+                // 如果未走到最大值即可继续点击
+                $(".dandan-list").stop().animate({
+                    left: nowMove += move
+                })
+                flag = true;
+            }
+            $('.dandan-btn-right').css("opacity", 1);
+            // 判断是否走到底
+            if (nowMove == 0) {
+                // console.log("左边不能点了");
+                $('.dandan-btn-left').css("opacity", 0.2);
+            }
         })
 
+        // 右
+        $('.dandan-btn-right').on("click", function () {
+            if (-maxMove < nowMove) {
+                // 如果未走到最大值即可继续点击
+                $(".dandan-list").stop().animate({
+                    left: nowMove -= move
+                })
+                flag = true;
+            }
+            $('.dandan-btn-left').css("opacity", 1);
+            // 判断是否走到底
+            if (nowMove == -maxMove) {
+                // console.log("右边不能点了");
+                $('.dandan-btn-right').css("opacity", 0.2);
+            }
+        })
     }())
+
+
+
+
+
+    /* 最新更新轮播图 */
+    ;
+    (function () {
+        // 每个轮播图的宽度 
+        let liWidth = $(".skin-hd .focus-list .items").innerWidth();
+        let liNum = $(".skin-hd .focus-list .items").length;
+        // 控制ul宽度
+        $(".skin-hd .focus-list").css("width", liWidth * liNum);
+
+        // 最大移动距离
+        let maxMove = (liNum - 3) * liWidth;
+        // 得到ul的当前位置
+        let nowMove = parseInt($(".skin-hd .focus-list").css("left"));
+        // 左按钮
+        $('.focus-btn .vi-pre').on("click", function () {
+            if (-maxMove < nowMove) {
+                $(".skin-hd .focus-list").animate({
+                    left: nowMove -= maxMove
+                })
+            }
+            $('.focus-btn .vi-next').css("opacity", 1)
+            // 判断是否走到底
+            if (nowMove == -maxMove) {
+                // console.log("右边不能点了");
+                $('.focus-btn .vi-pre').css("opacity", 0.5);
+            }
+        })
+        // 右 
+        $('.focus-btn .vi-next').css("opacity", 0.5);
+        $('.focus-btn .vi-next').on("click", function () {
+            if (nowMove < 0) {
+                $(".skin-hd .focus-list").animate({
+                    left: nowMove += maxMove
+                })
+            }
+            $('.focus-btn .vi-pre').css("opacity", 1)
+
+            // 判断是否走到底
+            if (nowMove == 0) {
+                console.log("右边不能点了");
+                $('.focus-btn .vi-next').css("opacity", 0.5);
+            }
+        })
+
+
+    }())
+    /* 最新更新轮播图结束 */
 });
