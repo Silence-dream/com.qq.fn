@@ -193,7 +193,19 @@ a:hover {
   position: relative;
   margin: 0px auto;
   width: 1000px;
-  overflow: hidden;
+}
+
+#zSlider:after, #zSlider:before {
+  content: "";
+  display: table;
+}
+
+#zSlider:after {
+  clear: both;
+}
+
+#zSlider {
+  *zoom: 1;
 }
 
 #picshow {
@@ -260,8 +272,6 @@ a:hover {
   height: 55.71429px;
   border-top: 1px solid #474747;
   cursor: pointer;
-  -webkit-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
 }
 
 #select_btn li:hover {
@@ -285,6 +295,9 @@ a:hover {
 }
 
 #select_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
   color: #ffffff;
 }
 
@@ -326,6 +339,44 @@ a:hover {
 p,
 p a {
   color: #666;
+}
+
+/* 隐藏的板块 */
+#select_btn .select-current {
+  display: none;
+  position: relative;
+  padding: 12px 0 0 20px;
+}
+
+#select_btn .title {
+  font-size: 16px;
+  color: #ff8f00;
+  padding-left: 50px;
+}
+
+#select_btn .incon1, #select_btn .incon2 {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  display: inline-block;
+  /* height: 20px; */
+  line-height: 20px;
+  background: url(../images/noshp_banner-tag.6dcced41.png) no-repeat;
+  background-position: 100% 0;
+  vertical-align: middle;
+  padding: 0 10px 0 5px;
+  font-size: 12px;
+  color: #fff;
+  margin: 0 4px 0 0;
+}
+
+#select_btn .incon2 {
+  background-position: 100% -25px;
+}
+
+#select_btn .info {
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 10px;
 }
 
 body {
@@ -1078,6 +1129,10 @@ body:after {
 }
 
 /* 排行榜轮播图 */
+.more-game-fouse {
+  position: relative;
+}
+
 .more-pai-conent {
   position: relative;
   width: 1000px;
@@ -1099,6 +1154,9 @@ body:after {
 }
 
 .more-pai-conent .more-tui {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 1020px;
 }
 
@@ -1409,6 +1467,57 @@ body:after {
 .more-pai-conent .more-items-content img {
   width: 100%;
   height: 100%;
+}
+
+/* 轮播图按钮 */
+.more-btn {
+  background-color: red;
+}
+
+.more-btn .vi-pre,
+.more-btn .vi-next {
+  position: absolute;
+  width: 30px;
+  height: 68px;
+  background-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+  line-height: 68px;
+  cursor: pointer;
+}
+
+.more-btn .vi-pre:hover,
+.more-btn .vi-next:hover {
+  background-color: #787878;
+}
+
+.more-btn .vi-pre i,
+.more-btn .vi-next i {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 25px;
+}
+
+.more-btn .vi-pre {
+  top: 50%;
+  left: -40px;
+  z-index: 999;
+}
+
+.more-btn .vi-pre i {
+  background: url(../images/xz-left.png) no-repeat;
+}
+
+.more-btn .vi-next {
+  top: 50%;
+  right: -40px;
+  z-index: 999;
+}
+
+.more-btn .vi-next i {
+  background: url(../images/xz-right.png) no-repeat;
 }
 
 /* 蛋蛋君推荐游戏 */
@@ -2456,3 +2565,96 @@ body:after {
 }
 
 /* 底部版权结束 */
+/* 左侧边栏开始 */
+.left-sildebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 168px;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.left-sildebar .sildebar-hd {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin: 0 10px;
+  height: 48px;
+  line-height: 49px;
+}
+
+.left-sildebar .sildebar-bd {
+  margin: 0 20px;
+  border-top: 1px solid #e4e4e4;
+  padding-bottom: 20px;
+}
+
+.left-sildebar .sildebar-bd li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.left-sildebar .sildebar-bd a:hover {
+  color: #ff9600;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* 左侧边栏结束 */
+/* 右边侧边栏 */
+.right-sildebar-hd h3 {
+  display: block;
+  font-size: 14px;
+  width: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 18px auto 0;
+  line-height: 16px;
+  color: #3c3c3c;
+}
+
+.right-sildebar-bd .incon {
+  display: inline-block;
+}
+
+.right-sildebar-bd .gs-svg-icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+}
+
+.right-sildebar-bd svg {
+  width: 34px;
+  height: 34px;
+  -webkit-filter: drop-shadow(#494949 80px 0);
+          filter: drop-shadow(#494949 80px 0);
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
+}
+
+.right-sildebar-current {
+  background: #ffca28;
+}
+
+.right-sildebar-current svg {
+  -webkit-filter: drop-shadow(#000000 80px 0);
+          filter: drop-shadow(#000000 80px 0);
+}
+
+/* 右边侧边栏结束 */
+/* 媒体查询 */
+@media screen and (max-width: 1400px) {
+  .left-sildebar {
+    display: none;
+  }
+}
