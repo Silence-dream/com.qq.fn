@@ -383,4 +383,78 @@ $(function () {
 
     }())
     /* 最新更新轮播图结束 */
+
+
+
+
+
+    /* 右侧固定 侧边栏 */
+    ;
+    (function () {
+        // 页面载入右侧隐藏
+        $(".right-sildebar").hide();
+        // 返回顶部隐藏
+        $(".right-sildebar-end .items").eq(1).hide();
+        $(window).on("scroll", function () {
+            // 获取移动的距离
+            let move = $(this).scrollTop()
+            // 侧边栏显示与隐藏
+            // console.log($(".dvAppointment").offset().top);
+            if (move >= $(".banner-fouse").offset().top) {
+                $(".right-sildebar").show();
+            } else {
+                $(".right-sildebar").hide();
+            };
+
+            if (move >= $(".dvAppointment").offset().top) {
+                $(".right-sildebar-end .items").eq(1).slideDown();
+            } else {
+                $(".right-sildebar-end .items").eq(1).slideUp();
+            }
+
+            /* 轮播到谁添加类 */
+            $(".nav-stairs").each(function (index, ele) {
+                let eleHeight = $(ele).offset().top;
+                if (move >= parseInt(eleHeight)) {
+                    $(".right-sildebar-bd .items").eq(index).addClass("right-sildebar-current").siblings().removeClass("right-sildebar-current");
+                }
+            })
+        });
+
+
+        /* 点谁到谁 */
+        $(".right-sildebar-bd .items").on("click", function () {
+            let move = $(".nav-stairs").eq($(this).index()).offset().top;
+            console.log(move);
+            $("html,body").animate({
+                scrollTop: move
+            })
+        });
+        /* 隐藏信息显示 */
+        $(".right-sildebar-bd .items").hover(function () {
+            // over
+            clearTimeout(timer);
+            $(this).find(".focuse").stop().fadeIn();
+            var timer = setTimeout(() => {
+                $(this).find(".focuse").stop().fadeOut();
+            }, 2000);
+        }, function () {
+            // out
+            $(this).find(".focuse").stop().fadeOut()
+        });
+
+        /* 购物车和返回顶部 */
+        // right-sildebar-end
+        $(".right-sildebar-end .items").on("click", function () {
+            let index = $(this).index();
+            if (index == 0) {
+                console.log("购物车");
+            } else if (index == 1) {
+                $("html,body").animate({
+                    scrollTop: 0
+                })
+            }
+        });
+    }())
+    /* 右侧固定 侧边栏结束 */
 });

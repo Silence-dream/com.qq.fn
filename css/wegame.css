@@ -267,6 +267,17 @@ a:hover {
   overflow: hidden;
 }
 
+#select_btn {
+  position: absolute;
+  float: right;
+  right: 0;
+  width: 214px;
+  height: 390px;
+  color: #111;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 #select_btn li {
   width: 214px;
   height: 55.71429px;
@@ -299,16 +310,6 @@ a:hover {
   width: 100%;
   height: 100%;
   color: #ffffff;
-}
-
-#select_btn {
-  position: absolute;
-  float: right;
-  right: 0;
-  width: 214px;
-  height: 390px;
-  color: #111;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #select_btn img {
@@ -761,6 +762,10 @@ body:after {
 
 /* 背景大图结束 */
 /* 垂直轮播图 */
+.banner-fouse {
+  padding-bottom: 30px;
+}
+
 /* 垂直轮播图结束 */
 .dvAppointment {
   position: relative;
@@ -2217,8 +2222,25 @@ body:after {
   font-weight: 700;
   text-align: center;
   padding: 0 16px;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.test-bar .test-bottom {
+  padding-top: 20px;
+}
+
+.test-bar .test-bottom:after, .test-bar .test-bottom:before {
+  content: "";
+  display: table;
+}
+
+.test-bar .test-bottom:after {
+  clear: both;
+}
+
+.test-bar .test-bottom {
+  *zoom: 1;
 }
 
 /* 最新玩法内容 */
@@ -2612,6 +2634,25 @@ body:after {
 
 /* 左侧边栏结束 */
 /* 右边侧边栏 */
+.right-sildebar {
+  position: fixed;
+  bottom: 80px;
+  left: 50vw;
+  margin-left: 555px;
+  display: inline-block;
+  background-color: #fff;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.right-sildebar-hd {
+  display: inline-block;
+}
+
 .right-sildebar-hd h3 {
   display: block;
   font-size: 14px;
@@ -2623,32 +2664,65 @@ body:after {
   color: #3c3c3c;
 }
 
-.right-sildebar-bd .incon {
+.right-sildebar-bd .items, .right-sildebar-end .items {
+  position: relative;
+  text-align: center;
+}
+
+.right-sildebar-bd .incon, .right-sildebar-end .incon {
+  position: relative;
   display: inline-block;
 }
 
-.right-sildebar-bd .gs-svg-icon {
+.right-sildebar-bd .gs-svg-icon, .right-sildebar-end .gs-svg-icon {
   display: inline-block;
   width: 34px;
   height: 34px;
 }
 
-.right-sildebar-bd svg {
+.right-sildebar-bd svg, .right-sildebar-end svg {
   width: 34px;
   height: 34px;
-  -webkit-filter: drop-shadow(#494949 80px 0);
-          filter: drop-shadow(#494949 80px 0);
-  -webkit-transform: translateX(-80px);
-          transform: translateX(-80px);
+  color: #494949;
 }
 
+.right-sildebar-bd .focuse, .right-sildebar-end .focuse {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 120%;
+  background: #ffffff;
+  border: 1px solid #c0c0c0;
+  color: #3c3c3c;
+  padding: 9px 12px;
+  white-space: nowrap;
+}
+
+.right-sildebar-bd .focuse-icon, .right-sildebar-end .focuse-icon {
+  position: absolute;
+  top: 50%;
+  right: -21px;
+  -webkit-transform: translateY(-50%) rotate(270deg);
+          transform: translateY(-50%) rotate(270deg);
+  width: 30px;
+  height: 12px;
+  background: url(../images/ico-tui-tips-arrow.png) no-repeat;
+}
+
+/* 右边选中的颜色 */
 .right-sildebar-current {
+  border-radius: 50%;
   background: #ffca28;
 }
 
 .right-sildebar-current svg {
-  -webkit-filter: drop-shadow(#000000 80px 0);
-          filter: drop-shadow(#000000 80px 0);
+  color: #494949;
+}
+
+/* 最后的两个svg */
+.right-sildebar-end {
+  border-top: 1px solid #e4e4e4;
 }
 
 /* 右边侧边栏结束 */
