@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wegame上的 游戏列表</title>
+    <link rel="shortcut icon" href="we-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/wegame-store-games.css">
+    <script src="./js/wegame-store-games-data.js"></script>
+    <script src="./lib/jQuery/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header-warp">
+        <div class="header-content">
+            <div class="logo"></div>
+            <ul class="nav">
+                <li><a href="javascript:;">商店</a></li>
+                <li><a href="javascript:;">客户端</a></li>
+                <li><a href="javascript:;">移动端</a></li>
+                <li><a href="javascript:;">翼计划</a></li>
+                <li><a href="javascript:;">帮助反馈</a></li>
+            </ul>
+            <div class="login">
+                <a href="javascript:;">开发者平台</a>
+                <a href="javascript:;">下载客户端</a>
+                <a href="javascript:;">登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="wegame-content">
+        <!-- 搜索 -->
+        <div class="wegame-search">
+            <div class="home-nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="javascript:;">精选</a>
+                    </li>
+                    <li class="list-menu">
+                        <a href="javascript:;">所有内容
+                            <i class="iconfont">
+                                &#xe66f;
+                            </i>
+                        </a>
+                        <div class="list" id="wegame-menu">
+                            <a href="javascript:;">娱乐应用</a>
+                            <a href="javascript:;">更多内容</a>
+                        </div>
+                    </li>
+                </ul>
+                <!--  -->
+                <ul class="hots-search">
+                    <li>
+                        <a href="javascript:;">大型网游</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">单机</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">凤仪亭预约</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">类狼人杀游戏</a>
+                    </li>
+                </ul>
+                <!--  -->
+                <div class="tui-search">
+                    <input type="text">
+                    <span>
+                        <i class="iconfont">
+                            &#xe63f;
+                        </i>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 搜索结束-->
+
+        <!-- 轮播图 -->
+        <div class="fr-games">
+            <div class="fr-games-content">
+                <div class="fr-games-bar">
+                    <ul class="fr-games-list">
+                        <li class="items">
+                            <a href="javascript:;">
+                                <figure>
+                                    <img src="./images/fr-games-list1.jpg" alt="">
+                                </figure>
+                                <div class="figure-info">
+                                    <p>群雄逐鹿HD</p>
+                                    <span class="figure-text2">
+                                        免费
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="items">
+                            <a href="javascript:;">
+                                <figure>
+                                    <img src="./images/fr-games-list2.jpg" alt="">
+                                </figure>
+                                <div class="figure-info">
+                                    <p>火箭联盟</p>
+                                    <span class="figure-text3">
+                                        腾讯运营
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="items">
+                            <a href="javascript:;">
+                                <figure>
+                                    <img src="./images/fr-games-list3.jpg" alt="">
+                                </figure>
+                                <div class="figure-info">
+                                    <p>洪潮之焰</p>
+                                    <span class="figure-text2">
+                                        <i>&yen;</i>
+                                        48
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="items">
+                            <a href="javascript:;">
+                                <figure>
+                                    <img src="./images/fr-games-list4.jpg" alt="">
+                                </figure>
+                                <div class="figure-info">
+                                    <p>隐形守护者</p>
+                                    <span class="figure-text2">
+                                        <i>&yen;</i>
+                                        26
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="items">
+                            <a href="javascript:;">
+                                <figure>
+                                    <img src="./images/fr-games-list5.jpg" alt="">
+                                </figure>
+                                <div class="figure-info">
+                                    <p>铁架雄兵</p>
+                                    <span class="figure-text2">
+                                        免费
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 按钮 -->
+                <div class="tui-slider">
+                    <div class="btn-pre"></div>
+                    <div class="btn-next"></div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 轮播图结束 -->
+
+        <!-- 全部游戏 -->
+        <div class="wegame-all">
+            <div class="wegame-all-games">
+                <!-- 左 -->
+                <div class="fr-main-cont">
+                    <div class="fr-main-top">
+                        <div class="wegame-games-table">
+                            <div class="we-all-text">
+                                <div class="WG__operateTxt">全部内容</div>
+                                <div class="WG__operateTxtNum">
+                                    共
+                                    <i>415</i>
+                                    款
+                                </div>
+                            </div>
+                            <ul class="we-info-table">
+                                <li class="items">火爆新品</li>
+                                <li class="items">本周热门</li>
+                                <li class="items">最新上架</li>
+                                <li class="items">折扣促销</li>
+                            </ul>
+                        </div>
+                        <ul class="all-games-list"></ul>
+                    </div>
+                </div>
+                <!-- 右 -->
+                <div class="fr-main-sidebar"></div>
+            </div>
+        </div>
+        <!-- 全部游戏结束 -->
+    </div>
+
+    <!-- 内容结束 -->
+
+    <!-- 底部版权 -->
+    <div class="copy">
+        <div class="copy-bar">
+            <div class="copy-row">
+                <ul class="copy-list">
+                    <li class="items">
+                        <a href="javascript:;">
+                            <h3>下载客户端:</h3>
+                            <div class="copy-icon">
+                                <img src="./images/windows.png" alt="">
+                                <p>PC端</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="items">
+                        <a href="javascript:;">
+                            <h3>官方渠道:</h3>
+                            <div class="copy-icon">
+                                <img src="./images/weibo.png" alt="">
+                                <p>微博</p>
+                            </div>
+                            <div class="copy-icon">
+                                <img src="./images/wechat3.png" alt="">
+                                <p>微信</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="items">
+                        <h3>友情链接:</h3>
+                        <div class="items-list">
+                            <a href="javascript:;">QQ阅读</a>
+                            <a href="javascript:;">腾讯GWB</a>
+                            <a href="javascript:;">腾讯动漫</a>
+                            <a href="javascript:;">腾讯视频</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="copy-row copy-row-2">
+                <p>
+                    <a href="javascript:;"> 关于腾讯</a>
+                    <span>|</span>
+                    <a href="javascript:;"> About Tencent</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 服务条款</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 用户服务协议</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 隐私政策</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 侵权通知</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 广告服务</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 腾讯招聘</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 客服中心</a>
+                    <span>|</span>
+                    <a href="javascript:;"> 网站导航</a>
+                </p>
+                <p>
+                    COPYRIGHT © 1998 – 2020 TENCENT. ALL RIGHTS RESERVED.
+                </p>
+                <p>
+                    <a href="javascript:;">
+                        腾讯公司 版权所有
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部版权结束 -->
+    <script src="./js/wegame-store-games.js"></script>
+</body>
+
+
+</html>

@@ -525,6 +525,7 @@ body:after {
 /* 搜索 */
 .wegame-search {
   height: 50px;
+  background-color: #f4f4f5;
   line-height: 50px;
 }
 
@@ -2584,6 +2585,15 @@ body:after {
   text-align: center;
   font-size: 12px;
   line-height: 24px;
+  color: #666666;
+}
+
+.copy-row-2 p a {
+  color: #666666;
+}
+
+.copy-row-2 p a:hover {
+  color: #909090;
 }
 
 /* 底部版权结束 */
