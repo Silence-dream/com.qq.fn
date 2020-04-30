@@ -59,4 +59,45 @@ $(function () {
         //     console.log(1);
         // });
     }())
+
+
+
+
+    /* 热门标签 */
+    ;
+    (function () {
+        // 页面载入
+        /* 给a上titile  */
+        $(".wegame-all .hotTagsList a").each(function (index, ele) {
+            $(ele).prop("title", $(ele).find("span").html());
+        })
+        /* 同时隐藏多余的标签 */
+        $(".wegame-all .hotTags .hotTagsList a").each(function (index, ele) {
+            if (index >= 10) {
+                $(ele).hide();
+            }
+        })
+        // 页面结束
+        /* 点击显示标签 */
+        let flag = true;
+        $("#moreTags").on("click", function () {
+            if (flag) {
+                $(".wegame-all .hotTagsList a").each(function (index, ele) {
+                    if (index >= 10) {
+                        $(ele).show();
+                    }
+                })
+                flag = false;
+            } else {
+                $(".wegame-all .hotTagsList a").each(function (index, ele) {
+                    if (index >= 10) {
+                        $(ele).hide();
+                    }
+                })
+                flag = true;
+            }
+        });
+
+
+    }())
 });

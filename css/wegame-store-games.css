@@ -608,8 +608,8 @@ body:after {
   height: 68px;
   background: rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   z-index: 10;
   margin-top: -34px;
   border-radius: 4px;
@@ -631,7 +631,7 @@ body:after {
   margin-top: -10px;
   margin-right: -5px;
   background-size: 100%;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .tui-slider .btn-next {
@@ -652,6 +652,7 @@ body:after {
 /* 全部游戏 */
 .wegame-all {
   position: relative;
+  margin-top: 40px;
 }
 
 .wegame-all .wegame-all-games {
@@ -660,8 +661,22 @@ body:after {
   margin: 0 auto;
 }
 
+.wegame-all .wegame-all-games:after, .wegame-all .wegame-all-games:before {
+  content: "";
+  display: table;
+}
+
+.wegame-all .wegame-all-games:after {
+  clear: both;
+}
+
+.wegame-all .wegame-all-games {
+  *zoom: 1;
+}
+
 /* 标题 */
 .fr-main-cont {
+  float: left;
   width: 700px;
 }
 
@@ -721,6 +736,7 @@ body:after {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 .we-info-table .items {
@@ -734,6 +750,375 @@ body:after {
   margin-left: -1px;
   position: relative;
   overflow: hidden;
+}
+
+.cur {
+  border: 1px solid #3c3c3c;
+  background: #3c3c3c;
+  z-index: 2;
+  color: #fff;
+}
+
+.cur a {
+  color: #fff;
+  background: transparent;
+}
+
+.all-games-list .items {
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.all-games-list .items:after, .all-games-list .items:before {
+  content: "";
+  display: table;
+}
+
+.all-games-list .items:after {
+  clear: both;
+}
+
+.all-games-list .items {
+  *zoom: 1;
+}
+
+.all-games-list .items:hover {
+  background-color: #f4f4f4;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.all-games-list .items .figure {
+  float: left;
+}
+
+.all-games-list .items img {
+  display: block;
+  width: 180px;
+  height: 102px;
+}
+
+.all-games-list .items-info {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 102px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.all-games-list .items-info a {
+  display: inline-block;
+  color: #757575;
+  border: 1px solid #e0e0e0;
+  padding: 0 5px;
+  margin: 0 4px 0 0;
+}
+
+.all-games-list .table-cell {
+  float: left;
+  line-height: 2;
+}
+
+.all-games-list .table-cell .gamecard-tit {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3c3c3c;
+}
+
+.all-games-list .tui-label {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 18px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 7px;
+}
+
+.all-games-list .tui-label a {
+  font-size: 12px;
+}
+
+.all-games-list .gamecard-other {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 23px;
+  line-height: 23px;
+}
+
+.all-games-list .gamecard-other i {
+  font-size: 14px;
+}
+
+.all-games-list > span {
+  font-size: 14px;
+}
+
+.all-games-list .price-tag {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff6f00;
+  border-radius: 2px;
+  min-width: 50px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.all-games-list .price-new {
+  display: inline-block;
+  color: #ff6f00;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  padding: 0 4px;
+  height: 100%;
+}
+
+.all-games-list .price-old {
+  display: inline-block;
+  height: 100%;
+  font-size: 14px;
+}
+
+.all-games-list del {
+  text-decoration: line-through;
+}
+
+.fr-main-sidebar {
+  width: 280px;
+  float: right;
+}
+
+.fr-main-bottom {
+  margin-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fr-main-bottom .page-num, .fr-main-bottom .ellipsis {
+  display: inline-block;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  color: #757575;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 8px;
+  text-align: center;
+  background: transparent;
+  min-width: 26px;
+  height: 24px;
+  line-height: 22px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fr-main-bottom .page-go {
+  margin-left: 22px;
+  font-size: 12px;
+  text-align: left;
+  color: #757575;
+  display: inline-block;
+  text-align: center;
+  min-width: 26px;
+  height: 24px;
+  line-height: 22px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fr-main-bottom .page-go input {
+  background: #fff;
+  border: 1px solid #a4a4a4;
+  color: #3c3c3c;
+  border-radius: 2px;
+  width: 48px;
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 8px;
+  cursor: text;
+  padding: 0 5px;
+}
+
+.fr-main-bottom .page-go .btn-confirm {
+  display: inline-block;
+  text-align: center;
+  min-width: 26px;
+  height: 24px;
+  line-height: 22px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: none;
+  border: 1px solid #a4a4a4;
+  color: #3c3c3c;
+  border-radius: 60px;
+  min-width: 50px;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 8px;
+}
+
+.page-cur {
+  background-color: rgba(255, 202, 40, 0.5) !important;
+  border-color: #ffb300 !important;
+  color: #3c3c3c !important;
+}
+
+.page-bar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page-bar .btn-prev, .page-bar .btn-next {
+  display: inline-block;
+  text-align: center;
+  min-width: 26px;
+  width: 38px;
+  height: 24px;
+  line-height: 22px;
+  vertical-align: top;
+  border: 1px solid #bfbfbf;
+}
+
+.page-bar .btn-prev:before, .page-bar .btn-next:before {
+  content: "";
+  width: 6px;
+  height: 11px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-right: 2px;
+  background: url(../images/ico-arrow-left.png) no-repeat;
+}
+
+.page-bar .btn-next {
+  background-color: #efefef;
+}
+
+.page-bar .btn-next:before {
+  background: url(../images/ico-arrow-right.png) no-repeat;
+}
+
+/*  */
+.hotTags, .propsList {
+  background-color: #fff;
+  padding-top: 18px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.panel-hd {
+  position: relative;
+  height: 21px;
+  line-height: 21px;
+  background-color: #fff;
+  font-size: 12px;
+  color: #757575;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.panel-hd h3 {
+  float: left;
+  font-size: 18px;
+  color: #3c3c3c;
+}
+
+.panel-bd {
+  padding-top: 10px;
+}
+
+.panel-bd .hotTagsList {
+  overflow: hidden;
+}
+
+.panel-bd a {
+  float: left;
+  width: 118px;
+  border-radius: 4px;
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-right: 2px;
+  margin-bottom: 2px;
+  padding-left: 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.panel-bd a:before {
+  content: "";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  vertical-align: -2px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.panel-bd a:after {
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  top: 10px;
+  z-index: 0;
+  background: url(../images/right.png) no-repeat 1px 4px;
+}
+
+/* 点击显示√ */
+.tag-cur:after {
+  opacity: 1 !important;
+}
+
+.panel-ft {
+  height: 38px;
+  margin: 20px -20px -20px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.panel-ft .btn-more {
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e2e2e2;
+  text-align: center;
 }
 
 /* 全部游戏结束 */
