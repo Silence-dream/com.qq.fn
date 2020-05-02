@@ -194,7 +194,9 @@ body {
 }
 
 .kf-header-wrap {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 999;
 }
 
@@ -620,8 +622,18 @@ body {
   z-index: 999;
 }
 
+.nav-current2 {
+  top: 80px;
+  background-color: #fff !important;
+  border-bottom: 1px solid #eee;
+  -webkit-transition: background-color 0.2s ease-in-out !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
 .kf-nav {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
   width: 100%;
   background: transparent;
 }

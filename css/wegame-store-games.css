@@ -764,6 +764,10 @@ body:after {
   background: transparent;
 }
 
+.all-games-list {
+  margin-top: 20px;
+}
+
 .all-games-list .items {
   background-color: #fff;
   cursor: pointer;

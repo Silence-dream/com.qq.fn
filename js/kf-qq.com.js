@@ -12,6 +12,7 @@ $(function () {
 
     /* 页面滚动效果 */
     // 得到要滚动的距离
+
     let navHeight = $(".mod-nav").offset().top - 160;
     $(window).on("scroll", function () {
         // 得到移动距离
@@ -19,20 +20,10 @@ $(function () {
         /* 轮播顶部导航固定 */
         if (moveHeight > 0) {
             $(".kf-header").css({
-                position: "fixed",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
                 background: "#fff"
             })
         } else if (moveHeight == 0) {
             $(".kf-header").css({
-                position: "relative",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
                 background: "transparent"
             })
         }
@@ -40,9 +31,9 @@ $(function () {
 
         /* nav 导航固定 */
         if (moveHeight >= navHeight) {
-            $(".kf-nav").addClass("nav-current")
+            $(".kf-nav").addClass("nav-current2")
         } else if (moveHeight < navHeight) {
-            $(".kf-nav").removeClass("nav-current")
+            $(".kf-nav").removeClass("nav-current2")
         }
         /* nav 导航固定end */
 
@@ -87,6 +78,10 @@ $(function () {
             // console.log(111);
         }
     });
+
+
+
+
     // $(window).on("scroll", function () {
     //     console.log(11);
     // })
