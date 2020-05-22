@@ -194,7 +194,6 @@ body {
   min-width: 1200px;
   max-width: 1920px;
   margin: 0 auto;
-  height: 19000px;
 }
 
 /* 顶部通用腾讯游戏通栏 */
@@ -788,6 +787,165 @@ body {
 
 .dh_wrap .dh_inner .icon8 {
   background-position: 0 -200px;
+}
+
+.dh_wrap .dh_inner .ws-wb {
+  width: 116px;
+  height: auto;
+  margin-top: -8px;
+  margin-left: -20px;
+  background: inherit;
+}
+
+.dh_wrap .dh_inner .qw-ws, .dh_wrap .dh_inner .qw-wb {
+  display: block;
+  width: 116px;
+  height: 28px;
+  font-size: 0;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: -750px -796px;
+}
+
+.dh_wrap .dh_inner .qw-wb {
+  background-position: -750px -830px;
+  margin-top: 5px;
+}
+
+.dh_wrap .dh_inner .dh {
+  float: right;
+  width: 172px;
+  height: 60px;
+  color: #41353a;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: -220px 0;
+}
+
+.dl_wrap {
+  height: 948px;
+  background: url(../images/bg8.jpg) top center no-repeat;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dl_wrap .wrap_title {
+  display: block;
+  width: 988px;
+  height: 80px;
+  margin: 20px auto 0;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: 0 -420px;
+}
+
+.dl_wrap .content {
+  width: 1200px;
+  margin: 30px auto 0;
+  clear: both;
+  position: relative;
+}
+
+.dl_wrap .rw {
+  width: 568px;
+  height: 552px;
+  background: url(../images/dl_rw.png) top center no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dl_wrap .info {
+  width: 640px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dl_wrap .gold_list .title {
+  width: 146px;
+  height: 26px;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: -158px -508px;
+}
+
+.dl_wrap .gold_list .item_list {
+  width: 620px;
+  height: 80px;
+  background: url(../images/gold_bg.png) top center no-repeat;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.dl_wrap .gold_list .item {
+  width: 60px;
+  height: 60px;
+  float: left;
+  border-radius: 50%;
+  background: #000 url(../images/yz_off.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 10px 20px;
+}
+
+.dl_wrap .btn_wrap {
+  margin-top: 14px;
+}
+
+.dl_wrap .btn_wrap .dh {
+  display: inline-block;
+  width: 170px;
+  height: 50px;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: -220px -70px;
+  margin-right: 20px;
+}
+
+.dl_wrap .btn_wrap .yy {
+  display: inline-block;
+  width: 170px;
+  height: 50px;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: -400px 0;
+  margin-right: 20px;
+}
+
+.dl_wrap .btn_wrap .qqyy {
+  width: 350px;
+  height: 50px;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: -566px -724px;
+  margin-top: 14px;
+}
+
+.dl_wrap .rule {
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.dl_wrap .rule .title {
+  width: 148px;
+  height: 26px;
+  background: url(../images/spr3.png) no-repeat;
+  background-position: 0 -508px;
+}
+
+.dl_wrap .rule .item {
+  margin: 10px 0;
+}
+
+#afooter {
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  background-color: #000;
+}
+
+#afooter a {
+  color: #fff;
+  line-height: 2;
 }
 
 /* 动画组 */
